@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jonathan Poterjoy · Data Assimilation and Weather Prediction · University of Maryland</title>
+  <meta name="description" content="Jonathan Poterjoy, Associate Professor at the University of Maryland, leads a research group in data assimilation, particle filters, and machine learning for numerical weather prediction, hurricanes, and sea ice.">
+  <meta property="og:title" content="Jonathan Poterjoy · Data Assimilation and Weather Prediction · University of Maryland">
+  <meta property="og:description" content="Jonathan Poterjoy, Associate Professor at the University of Maryland, leads a research group in data assimilation, particle filters, and machine learning for numerical weather prediction, hurricanes, and sea ice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://poterjoy.com/">
+  <meta property="og:image" content="https://poterjoy.com/assets/img/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Melt-ponded sea ice and an open lead under cloud in the Canada Basin, Arctic Ocean">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://poterjoy.com/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/XCharter-Roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfilePage", "url": "https://poterjoy.com/", "mainEntity": {"@type": "Person", "name": "Jonathan Poterjoy", "url": "https://poterjoy.com/", "image": "https://poterjoy.com/assets/img/portrait.jpg", "email": "mailto:poterjoy@umd.edu", "jobTitle": "Associate Professor and Graduate Program Director", "worksFor": {"@type": "CollegeOrUniversity", "name": "University of Maryland, College Park", "url": "https://umd.edu/"}, "affiliation": {"@type": "Organization", "name": "Department of Atmospheric and Oceanic Science, University of Maryland", "url": "https://aosc.umd.edu/"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "The Pennsylvania State University"}, {"@type": "CollegeOrUniversity", "name": "Millersville University of Pennsylvania"}], "knowsAbout": ["Data assimilation", "Ensemble data assimilation and ensemble Kalman filters", "Particle filters and non-Gaussian (Bayesian) data assimilation", "Hybrid ensemble-variational data assimilation (EnVar, 4DEnVar, 4DVar)", "Numerical weather prediction: global, regional, and convection-allowing models", "Hurricane and tropical cyclone data assimilation and prediction", "Radar and satellite radiance data assimilation", "Sea ice and polar data assimilation", "Uncertainty quantification and observation error estimation", "Machine learning for data assimilation: kernel methods and generative models", "Observing system simulation experiments (OSSEs) and observing system design", "NOAA Unified Forecast System (UFS), GFS, and HAFS; JEDI; NSF NCAR DART; WRF"], "award": ["National Science Foundation CAREER Award (2019)"], "sameAs": ["https://scholar.google.com/citations?user=hd_ZciIAAAAJ", "https://orcid.org/0000-0003-3927-4642", "https://github.com/jpoterjoy"]}}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Jonathan Poterjoy</span>
+        <span class="brand-sub">Data Assimilation · University of Maryland</span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="software.html">Software</a>
+        <a href="talks.html">Talks</a>
+        <a href="group.html">Group</a>
+        <a href="teaching.html">Teaching</a>
+        <a class="nav-cv" href="cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <canvas id="bayes" aria-hidden="true"></canvas>
+      <div class="credit"><a href="research.html#polar"><span class="long">Animation: simulated SSMIS and VIIRS radiances updating forecasts of sea ice and cloud (not to scale)</span><span class="short">Animation: satellite radiances updating sea ice and cloud</span></a> · <a href="https://commons.wikimedia.org/wiki/File:Arctic_Sky_(4371010590).jpg" title="Taken from USCGC Healy during the 2009 U.S.–Canada extended continental shelf survey, 19 August 2009. Photo by Petty Officer 3rd Class Patrick Kelley, U.S. Coast Guard (public domain)."><span class="long">Photo: melt-ponded sea ice, Canada Basin, Aug. 2009 (U.S. Coast Guard)</span><span class="short">Photo: Canada Basin sea ice, Aug 2009 (USCG)</span></a></div>
+      <div class="wrap">
+        <div class="hero-text">
+          <h1>Data assimilation for Earth system prediction</h1>
+          <p>Our group develops Bayesian methods that combine models with observations to predict everything from thunderstorms and hurricanes to Arctic sea ice.</p>
+          <div class="btns">
+            <a class="btn btn-solid" href="research.html">Our research</a>
+            <a class="btn btn-ghost" href="publications.html">Publications</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap about">
+        <div class="about-text">
+          <h2>Who we are</h2>
+          <p>
+  We are a research group in the
+  <a href="https://aosc.umd.edu/">Department of Atmospheric and Oceanic Science</a>
+  at the University of Maryland, College Park. We connect new mathematical developments in data assimilation with large-scale Earth system applications.
+</p>
+<p>Our work focuses on:</p>
+  <ul>
+    <li><strong>Data Assimilation Theory:</strong> Developing non-Gaussian ensemble filters and machine learning for state and parameter estimation.</li>
+    <li><strong>Earth System Applications:</strong> Improving our understanding of multi-scale predictability for global and mesoscale weather, hurricane rapid intensification, and sea ice dynamics.</li>
+    <li><strong>Research to Operations:</strong> Leading multi-institution efforts to transition theoretical advancements into national modeling systems, working directly alongside scientists at NOAA, NASA, and NSF NCAR.</li>
+    <li><strong>Education &amp; Mentorship:</strong> Training future scientists through specialized summer schools and leading UMD's role in a multi-university data assimilation consortium.</li>
+  </ul>
+          <p class="more"><a href="about.html">More about me →</a><a href="group.html">Meet our 10 Ph.D. students →</a></p>
+        </div>
+        <aside class="leader-card" aria-labelledby="leader-name">
+          <div class="body">
+          <div class="label">Group leader</div>
+          <h3 id="leader-name"><a href="about.html">Jonathan Poterjoy</a></h3>
+          <div class="role">Associate Professor and Graduate Program Director, Atmospheric and Oceanic Science</div>
+          <ul class="contact">
+            <li><span class="k">Email</span><a href="mailto:poterjoy@umd.edu">poterjoy@umd.edu</a></li>
+            <li><span class="k">CV</span><a href="cv.pdf">Download PDF</a></li>
+            <li><span class="k">Profiles</span><span><a href="https://scholar.google.com/citations?user=hd_ZciIAAAAJ">Google Scholar</a> · <a href="https://orcid.org/0000-0003-3927-4642">ORCID</a></span></li>
+          </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title"><h2>Current research themes</h2><a href="research.html">More about our research →</a></div>
+        <div class="themes">
+          <a class="theme-card" href="research.html#methods">
+            <div class="art"><img src="assets/img/research/card-methods.webp" width="640" height="480" alt="" loading="lazy"></div>
+            <div class="txt"><h3>New data assimilation methodology</h3><p>The local particle filter, learned likelihood functions, and estimates of observation uncertainty.</p></div>
+          </a>
+          <a class="theme-card" href="research.html#global">
+            <div class="art"><img src="assets/img/research/card-nongaussian.webp" width="640" height="480" alt="" loading="lazy"></div>
+            <div class="txt"><h3>Particle filters for global prediction</h3><p>Testing the local particle filter in NOAA's global forecast system and bringing it into JEDI.</p></div>
+          </a>
+          <a class="theme-card" href="research.html#mesoscale">
+            <div class="art"><img src="assets/img/research/card-observations.webp" width="640" height="480" alt="" loading="lazy"></div>
+            <div class="txt"><h3>Mesoscale weather prediction</h3><p>Particle filters for thunderstorms, radar assimilation, and mesoscale ensembles and observing networks.</p></div>
+          </a>
+          <a class="theme-card" href="research.html#hurricanes">
+            <div class="art"><img src="assets/img/research/card-hurricanes.webp" width="640" height="480" alt="" loading="lazy"></div>
+            <div class="txt"><h3>Hurricanes and high-impact weather</h3><p>Cycling data assimilation, radiance bias correction, and particle filters for NOAA's hurricane models.</p></div>
+          </a>
+          <a class="theme-card" href="research.html#polar">
+            <div class="art"><img src="assets/img/research/card-polar.webp" width="640" height="480" alt="" loading="lazy"></div>
+            <div class="txt"><h3>Sea ice and polar prediction</h3><p>Learned likelihoods and particle filters for sea ice, PREFIRE radiances, and ice sheet observing experiments.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title"><h2>Recent publications</h2><a href="publications.html">All 32 articles →</a></div>
+        <ol class="pubs pubs-home">
+<li data-n="32" data-kind="all advisee">Cheung*, A., D.&nbsp;P.&nbsp;Stern, P.&nbsp;M.&nbsp;Finocchio, and <span class="me">J.&nbsp;Poterjoy</span>, 2026: Using IMERG to Understand the Relationship Between Precipitation Structure and Intensification in Tropical Cyclones. <em>Mon. Wea. Rev.</em>, <b>154</b>, 2151–2172. <a class="doi" href="https://doi.org/10.1175/MWR-D-25-0200.1">DOI&nbsp;↗</a></li>
+<li data-n="31" data-kind="all">Wang, X., P.&nbsp;J.&nbsp;van Leeuwen, <span class="me">J.&nbsp;Poterjoy</span>, and 19 coauthors, 2026: The Multi-University Consortium for Advanced Data Assimilation Research and Education (CADRE). <em>Bull. Amer. Meteor. Soc.</em>, <b>107</b>, E2048–E2064. <a class="doi" href="https://doi.org/10.1175/BAMS-D-25-0098.1">DOI&nbsp;↗</a></li>
+<li data-n="30" data-kind="all advisee">Santer*, H., <span class="me">J.&nbsp;Poterjoy</span>, and M.&nbsp;El Gharamti, 2025: Innovation-Based Methods for Online Estimates of Observation Error Variances Within Ensemble Data Assimilation Cycles. <em>Mon. Wea. Rev.</em>, <b>153</b>, 1781–1792. <a class="doi" href="https://doi.org/10.1175/MWR-D-24-0242.1">DOI&nbsp;↗</a></li>
+<li data-n="29" data-kind="all">Choi, Y., A.&nbsp;Petty, D.&nbsp;Felikson, and <span class="me">J.&nbsp;Poterjoy</span>, 2025: Estimation of the State and Parameters in Ice Sheet Model Using an Ensemble Kalman Filter and Observing System Simulation Experiments. <em>The Cryosphere</em>, <b>19</b>, 5423–5444. <a class="doi" href="https://doi.org/10.5194/tc-19-5423-2025">DOI&nbsp;↗</a></li>
+<li data-n="28" data-kind="all advisee">Kurosawa*, K., and <span class="me">J.&nbsp;Poterjoy</span>, 2025: Augmented Flow-Dependent Perturbations to Mitigate Sampling Errors: Experiments for a Regional Application of the NOAA Unified Forecast System. <em>Wea. Forecasting</em>, <b>40</b>, 1147–1161. <a class="doi" href="https://doi.org/10.1175/WAF-D-24-0147.1">DOI&nbsp;↗</a></li>
+        </ol>
+        <p class="note" style="margin-top:18px">* Graduate student or postdoctoral advisee</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>Jonathan Poterjoy</h2>
+        Department of Atmospheric and Oceanic Science<br>
+        University of Maryland<br>
+        4254 Stadium Drive, 3431 Atlantic Building<br>
+        College Park, MD 20742
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:poterjoy@umd.edu">poterjoy@umd.edu</a><br>
+        <a href="cv.pdf">Curriculum vitae (PDF)</a>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <a href="https://scholar.google.com/citations?user=hd_ZciIAAAAJ">Google Scholar</a> · <a href="https://orcid.org/0000-0003-3927-4642">ORCID</a> · <a href="https://github.com/jpoterjoy">GitHub</a><br>
+        <a href="https://aosc.umd.edu/">UMD Atmospheric &amp; Oceanic Science</a><br>
+        <a href="https://ucadre.org/">CADRE data assimilation consortium</a><br>
+        <span class="small">Updated November 2026</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

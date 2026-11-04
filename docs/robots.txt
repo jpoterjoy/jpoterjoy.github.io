@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://poterjoy.com/sitemap.xml

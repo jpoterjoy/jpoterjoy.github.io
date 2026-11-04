@@ -1,0 +1,3 @@
+XCharter (Michael Sharpe), an extension of Bitstream Charter.
+Distributed via CTAN (https://ctan.org/pkg/xcharter) under the Bitstream Charter
+license, which permits use, modification, and redistribution.

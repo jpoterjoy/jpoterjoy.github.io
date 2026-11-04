@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research: data assimilation for weather, hurricane, and sea ice prediction · Jonathan Poterjoy</title>
+  <meta name="description" content="Research by Jonathan Poterjoy&#x27;s group: particle filters and ensemble data assimilation for global numerical weather prediction, convective storms, hurricanes, and sea ice, with NOAA, NASA, and NSF NCAR.">
+  <meta property="og:title" content="Research: data assimilation for weather, hurricane, and sea ice prediction · Jonathan Poterjoy">
+  <meta property="og:description" content="Research by Jonathan Poterjoy&#x27;s group: particle filters and ensemble data assimilation for global numerical weather prediction, convective storms, hurricanes, and sea ice, with NOAA, NASA, and NSF NCAR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://poterjoy.com/research.html">
+  <meta property="og:image" content="https://poterjoy.com/assets/img/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Melt-ponded sea ice and an open lead under cloud in the Canada Basin, Arctic Ocean">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://poterjoy.com/research.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/XCharter-Roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Jonathan Poterjoy</span>
+        <span class="brand-sub">Data Assimilation · University of Maryland</span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="software.html">Software</a>
+        <a href="talks.html">Talks</a>
+        <a href="group.html">Group</a>
+        <a href="teaching.html">Teaching</a>
+        <a class="nav-cv" href="cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Research</h1>
+      <p>Methods for combining models and observations, and the applications that test them.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+<p class="lede">
+  Data assimilation combines imperfect models with incomplete, noisy observations to
+  estimate the state of the atmosphere, ocean, and sea ice, and it starts every weather
+  forecast. Our group develops ensemble, particle filter, and machine learning methods for
+  data assimilation, especially where the usual assumptions of linear dynamics and Gaussian
+  errors break down.
+</p>
+
+<section class="theme" id="methods" data-reviewed="2026-11">
+  <figure>
+    <a href="assets/img/research/rankine-manifold.webp"><img src="assets/img/research/rankine-manifold.webp" width="865" height="534" loading="lazy"
+      alt="A twisted blue surface in three dimensions on which all prior states lie; red ensemble Kalman filter members sit well off the surface, while green local particle filter members stay close to it"></a>
+    <figcaption>Winds at three points around a Rankine vortex with an uncertain
+      position. All prior states lie on a twisted surface; after assimilating radar winds,
+      ensemble Kalman filter members (red) fall well off it, while local particle filter
+      members (green) stay close (<a href="https://doi.org/10.1175/MWR-D-21-0228.1">Poterjoy 2022a</a>).</figcaption>
+  </figure>
+  <div>
+    <h2>New data assimilation methodology</h2>
+    <p>
+      The <a href="software.html#lpf">local particle filter</a> (LPF), introduced by
+      <a href="https://doi.org/10.1175/MWR-D-15-0163.1">Poterjoy (2016)</a> and developed further
+      by our group, drops the Gaussian assumptions of operational data assimilation while
+      remaining practical for high-dimensional models
+      (<a href="https://doi.org/10.1175/MWR-D-17-0344.1">Poterjoy et al. 2019</a>;
+      <a href="https://doi.org/10.1002/qj.4328">Poterjoy 2022b</a>). Where the states a model
+      allows lie on a compact, curved manifold, ensemble Kalman filters pull members off it,
+      while the LPF keeps them close
+      (<a href="https://doi.org/10.1175/MWR-D-21-0228.1">Poterjoy 2022a</a>; figure); the two
+      filters can also be blended adaptively
+      (<a href="https://doi.org/10.1175/MWR-D-22-0108.1">Kurosawa and Poterjoy 2023</a>). We
+      also estimate observation errors online, which works even with non-Gaussian errors but
+      is sensitive to misspecified background uncertainty
+      (<a href="https://doi.org/10.1175/MWR-D-24-0242.1">Santer et al. 2025</a>;
+      <a href="https://doi.org/10.1175/MWR-D-22-0298.1">Walsworth et al. 2023</a>).
+    </p>
+    <p class="now"><span class="tag">Current work</span>
+      Learning likelihood functions from data with kernel and machine learning methods,
+      including approaches suited to small ensembles.
+    </p>
+  </div>
+  <div class="papers"><h3>Recent papers</h3> <a href="https://doi.org/10.1175/MWR-D-24-0242.1" title="Innovation-Based Methods for Online Estimates of Observation Error Variances Within Ensemble Data Assimilation Cycles">Santer et al. 2025</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-22-0298.1" title="Challenges for Inline Observation Error Estimation in the Presence of Misspecified Background Uncertainty">Walsworth et al. 2023</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-22-0108.1" title="A Statistical Hypothesis Testing Strategy for Adaptively Blending Particle Filters and Ensemble Kalman Filters for Data Assimilation">Kurosawa and Poterjoy 2023</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1002/qj.4328" title="Regularization and Tempering for a Moment-Matching Localized Particle Filter">Poterjoy 2022b</a></div>
+</section>
+
+<section class="theme" id="global" data-reviewed="2026-11">
+  <figure class="stack">
+    <video class="loop" width="640" height="530" muted loop playsinline preload="none"
+      poster="assets/img/research/global-lpf-poster.webp"
+      aria-label="Animation of a globe centered on the Atlantic, showing cyclones and troughs in the mid-level vorticity field evolving hour by hour">
+      <source src="assets/img/research/global-lpf-loop.mp4" type="video/mp4">
+    </video>
+    <a class="zoom" href="assets/img/research/enkf-lpf-vorticity.webp"><img src="assets/img/research/enkf-lpf-vorticity.webp" width="1157" height="541" loading="lazy"
+      alt="Side-by-side maps of upper-level vorticity over North America and the Atlantic in one ensemble member from each filter: the EnKF member is speckled with small-scale noise, while the LPF member shows smooth, continuous streams of vorticity wrapping around an extratropical cyclone"></a>
+    <figcaption><b>Top:</b> 500-hPa cyclonic vorticity in the hourly LPF posterior mean,
+      global Unified Forecast System. <b>Bottom:</b> 250-hPa vorticity in one EnKF and one LPF
+      member, regional HAFS experiment, 19 August 2020.</figcaption>
+  </figure>
+  <div>
+    <h2>Particle filters for global weather prediction</h2>
+    <p>
+      In weather models, ensemble Kalman filter members carry spurious small-scale
+      corrections that LPF members largely avoid
+      (<a href="https://doi.org/10.1175/MWR-D-21-0228.1">Poterjoy 2022a</a>; bottom panel).
+    </p>
+    <p class="now"><span class="tag">Current work</span>
+      With NOAA, testing the LPF in the Unified Forecast System behind the Global Forecast
+      System, where it matches the accuracy of the ensemble Kalman filter while estimating
+      uncertainty more reliably, and bringing it into JEDI, the data assimilation framework
+      used by NOAA and NASA.
+    </p>
+  </div>
+  <div class="papers"><h3>Recent papers</h3> <a href="https://doi.org/10.1175/MWR-D-21-0228.1" title="Implications of Multivariate Non-Gaussian Data Assimilation for Multiscale Weather Prediction">Poterjoy 2022a</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1002/qj.4328" title="Regularization and Tempering for a Moment-Matching Localized Particle Filter">Poterjoy 2022b</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-15-0322.1" title="Efficient Assimilation of Simulated Observations in a High-Dimensional Geophysical System Using a Localized Particle Filter">Poterjoy and Anderson 2016</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-15-0163.1" title="A Localized Particle Filter for High-Dimensional Nonlinear Systems">Poterjoy 2016</a></div>
+</section>
+
+<section class="theme" id="mesoscale" data-reviewed="2026-11">
+  <figure class="pair">
+    <div class="panels">
+      <a href="assets/img/research/radar-gaussian.webp"><span class="sub">Gaussian likelihood, 25&#8209;dBZ threshold</span>
+        <img src="assets/img/research/radar-gaussian.webp" width="535" height="535" loading="lazy"
+          alt="Simulated radar reflectivity of a line of storms over the Midwest after assimilation with a Gaussian likelihood"></a>
+      <a href="assets/img/research/radar-nonparametric.webp"><span class="sub">Learned likelihood, no threshold</span>
+        <img src="assets/img/research/radar-nonparametric.webp" width="535" height="535" loading="lazy"
+          alt="The same storms after assimilation with a nonparametric likelihood, showing a broader trailing region of light reflectivity"></a>
+    </div>
+    <img class="cbar" src="assets/img/research/radar-colorbar.webp" width="968" height="62" loading="lazy"
+      alt="Color scale for reflectivity, from 5 to 75 dBZ">
+    <figcaption>Composite reflectivity and winds from an LPF member in a WRF-based
+      Warn-on-Forecast System, assimilating radar with a Gaussian likelihood and a 25-dBZ
+      threshold (left) or a likelihood learned from data (right). Red contours enclose winds
+      above 30&nbsp;m&nbsp;s<sup>&minus;1</sup> near the level of strongest rear inflow.</figcaption>
+  </figure>
+  <div>
+    <h2>Data assimilation for mesoscale weather prediction</h2>
+    <p>
+      Thunderstorms evolve within minutes and are observed mostly by radar. Particle filter
+      analyses of convection stay more consistent with the model than ensemble Kalman filter
+      analyses (<a href="https://doi.org/10.1175/MWR-D-16-0298.1">Poterjoy et al. 2017</a>;
+      <a href="https://doi.org/10.1175/MWR-D-22-0260.1">McCurry et al. 2023</a>). We also
+      diagnose convective ensemble uncertainty
+      (<a href="https://doi.org/10.1175/MWR-D-22-0281.1">Santer et al. 2023</a>) and helped
+      plan the Maryland Mesonet with observing system simulation experiments
+      (<a href="https://doi.org/10.1175/WAF-D-24-0089.1">McCurry and Poterjoy 2024</a>).
+    </p>
+    <p class="now"><span class="tag">Current work</span>
+      Assimilating radar reflectivity with likelihoods learned from data, so weak echoes can
+      be used without a threshold (figure).
+    </p>
+  </div>
+  <div class="papers"><h3>Recent papers</h3> <a href="https://doi.org/10.1175/WAF-D-24-0089.1" title="Optimizing Numerical Weather Prediction Utility of the Maryland Mesonet With Observing System Simulation Experiments">McCurry and Poterjoy 2024</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-22-0281.1" title="Evaluating Contour Band Depth as a Method for Understanding Ensemble Uncertainty">Santer et al. 2023</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-22-0260.1" title="An Evaluation of Non-Gaussian Data Assimilation Methods in Moist Convective Regimes">McCurry et al. 2023</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/MWR-D-21-0228.1" title="Implications of Multivariate Non-Gaussian Data Assimilation for Multiscale Weather Prediction">Poterjoy 2022a</a></div>
+</section>
+
+<section class="theme" id="hurricanes" data-reviewed="2026-11">
+  <figure>
+    <video class="loop" width="1200" height="790" muted loop playsinline preload="none"
+      poster="assets/img/research/hafs-poster.webp"
+      aria-label="Animation of simulated satellite imagery over the Atlantic basin as Hurricanes Laura and Marco move into the Gulf of Mexico">
+      <source src="assets/img/research/hafs-loop.mp4" type="video/mp4">
+    </video>
+    <figcaption>Simulated satellite imagery from basin-scale HAFS analyses of Hurricanes
+      Laura and Marco, August 2020 (animation by Kenta Kurosawa).</figcaption>
+  </figure>
+  <div>
+    <h2>Hurricanes and high-impact weather</h2>
+    <p>
+      We develop ensemble and hybrid data assimilation for NOAA's hurricane models.
+      Continuous cycling in HWRF exposed errors hidden by restarting from global analyses
+      (<a href="https://doi.org/10.1175/WAF-D-20-0204.1">Poterjoy et al. 2021</a>); in HAFS,
+      estimating radiance bias corrections within the system improved forecasts
+      (<a href="https://doi.org/10.1175/WAF-D-23-0027.1">Knisely and Poterjoy 2023</a>), and
+      global ensemble perturbations mitigate sampling errors
+      (<a href="https://doi.org/10.1175/WAF-D-24-0147.1">Kurosawa and Poterjoy 2025</a>).
+    </p>
+    <p class="now"><span class="tag">Current work</span>
+      Basin-wide HAFS experiments reveal cloud-driven model biases and show that the LPF
+      keeps ensemble spread closer to forecast errors than the EnKF.
+    </p>
+  </div>
+  <div class="papers"><h3>Recent papers</h3> <a href="https://doi.org/10.1175/MWR-D-25-0200.1" title="Using IMERG to Understand the Relationship Between Precipitation Structure and Intensification in Tropical Cyclones">Cheung et al. 2026</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/WAF-D-24-0147.1" title="Augmented Flow-Dependent Perturbations to Mitigate Sampling Errors: Experiments for a Regional Application of the NOAA Unified Forecast System">Kurosawa and Poterjoy 2025</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/WAF-D-23-0027.1" title="Implications of Self-Contained Radiance Bias Correction for Data Assimilation Within the Hurricane Analysis and Forecasting System (HAFS)">Knisely and Poterjoy 2023</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1175/WAF-D-20-0204.1" title="The Irreplaceable Utility of Sequential Data Assimilation for Numerical Weather Prediction System Development: Lessons Learned From an Experimental HWRF System">Poterjoy et al. 2021</a></div>
+</section>
+
+<section class="theme" id="polar" data-reviewed="2026-11">
+  <figure>
+    <a href="assets/img/research/seaice-obs-distributions.webp"><img src="assets/img/research/seaice-obs-distributions.webp" width="968" height="570" loading="lazy"
+      alt="Left, a map of Arctic sea ice concentration with three marked points; right, histograms of observed sea ice concentration where the analysis is 0.14, 0.56, and 0.86, which are skewed, bounded by 0 and 1, and in one case bimodal"></a>
+    <figcaption>(a) Sea ice concentration (SIC) analysis from NOAA's coupled
+      ocean&ndash;ice experiments. (b) Distributions of observed SIC where the analysis SIC
+      is 0.14, 0.56, and 0.86; red markers show example locations (adapted from
+      <a href="https://doi.org/10.1175/BAMS-D-25-0098.1">Wang et al. 2026</a>).</figcaption>
+  </figure>
+  <div>
+    <h2>Sea ice, polar prediction, and observing system design</h2>
+    <p>
+      Sea ice concentration is bounded, and its observation errors depend on the ice state
+      (<a href="https://doi.org/10.1175/BAMS-D-25-0098.1">Wang et al. 2026</a>; figure). We
+      model atmospheric forcing errors for sea ice ensembles
+      (<a href="https://doi.org/10.31223/X5SN37">Jung et al. 2026</a>) and use observing
+      system simulation experiments to inform requirements for a future NASA satellite
+      mission (<a href="https://doi.org/10.5194/tc-19-5423-2025">Choi et al. 2025</a>).
+    </p>
+    <p class="now"><span class="tag">Current work</span>
+      Learning sea ice observation errors from data for the LPF in the CICE model and, with
+      NASA's PREFIRE science team, developing methods that assimilate far-infrared radiances
+      directly.
+    </p>
+  </div>
+  <div class="papers"><h3>Recent papers</h3> <a href="https://doi.org/10.1175/BAMS-D-25-0098.1" title="The Multi-University Consortium for Advanced Data Assimilation Research and Education (CADRE)">Wang et al. 2026</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.31223/X5SN37" title="A State-Dependent Error Covariance Model of Surface Atmospheric Forcings Over the Arctic Sea Ice">Jung et al. 2026</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.5194/tc-19-5423-2025" title="Estimation of the State and Parameters in Ice Sheet Model Using an Ensemble Kalman Filter and Observing System Simulation Experiments">Choi et al. 2025</a></div>
+</section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title"><h2>Current support</h2></div>
+        <div class="cards">
+          <div class="card">
+            <div class="label">NASA PREFIRE Science Team</div>
+            <h3>Advancing Polar Sea Ice Prediction With PREFIRE Radiance Observations and Next-Generation Data Assimilation Methods</h3>
+            <div class="meta">Co-I (PI: Alek Petty) · 2026–2029</div>
+          </div>
+          <div class="card">
+            <div class="label">NOAA</div>
+            <h3>A Multi-University Consortium for Advanced Data Assimilation Research and Education (CADRE)</h3>
+            <div class="meta">Institutional PI · 2024–2027</div>
+          </div>
+          <div class="card">
+            <div class="label">NOAA</div>
+            <h3>Non-Gaussian Ensemble Data Assimilation Within a Rapidly Updating Global Prediction System</h3>
+            <div class="meta">PI · 2023–2027</div>
+          </div>
+          <div class="card">
+            <div class="label">NSF</div>
+            <h3>Online Uncertainty Quantification for Novel Atmospheric Measurements</h3>
+            <div class="meta">PI · 2022–2026</div>
+          </div>
+        </div>
+        <p class="note" style="margin-top:18px">We also gratefully acknowledge computing support from the NSF NCAR Computational and Information Systems Laboratory.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>Jonathan Poterjoy</h2>
+        Department of Atmospheric and Oceanic Science<br>
+        University of Maryland<br>
+        4254 Stadium Drive, 3431 Atlantic Building<br>
+        College Park, MD 20742
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:poterjoy@umd.edu">poterjoy@umd.edu</a><br>
+        <a href="cv.pdf">Curriculum vitae (PDF)</a>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <a href="https://scholar.google.com/citations?user=hd_ZciIAAAAJ">Google Scholar</a> · <a href="https://orcid.org/0000-0003-3927-4642">ORCID</a> · <a href="https://github.com/jpoterjoy">GitHub</a><br>
+        <a href="https://aosc.umd.edu/">UMD Atmospheric &amp; Oceanic Science</a><br>
+        <a href="https://ucadre.org/">CADRE data assimilation consortium</a><br>
+        <span class="small">Updated November 2026</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

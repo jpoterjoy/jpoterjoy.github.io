@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software: local particle filter, DAPyr, and JEDI tutorials · Jonathan Poterjoy</title>
+  <meta name="description" content="Open-source data assimilation software from Jonathan Poterjoy&#x27;s group: the local particle filter in NSF NCAR DART, the DAPyr Python package for Lorenz-model experiments, and JEDI tutorials.">
+  <meta property="og:title" content="Software: local particle filter, DAPyr, and JEDI tutorials · Jonathan Poterjoy">
+  <meta property="og:description" content="Open-source data assimilation software from Jonathan Poterjoy&#x27;s group: the local particle filter in NSF NCAR DART, the DAPyr Python package for Lorenz-model experiments, and JEDI tutorials.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://poterjoy.com/software.html">
+  <meta property="og:image" content="https://poterjoy.com/assets/img/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Melt-ponded sea ice and an open lead under cloud in the Canada Basin, Arctic Ocean">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://poterjoy.com/software.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/XCharter-Roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareSourceCode", "name": "Local particle filter (LPF) for DART", "description": "A localized particle filter for high-dimensional geophysical data assimilation, distributed with the NSF NCAR Data Assimilation Research Testbed.", "codeRepository": "https://github.com/jpoterjoy/DART/tree/LPF", "programmingLanguage": "Fortran", "author": {"@type": "Person", "name": "Jonathan Poterjoy", "url": "https://poterjoy.com/"}, "citation": ["https://doi.org/10.1175/MWR-D-15-0163.1", "https://doi.org/10.1002/qj.4328"]}, {"@type": "SoftwareSourceCode", "name": "DAPyr", "description": "A Python package for data assimilation experiments with Lorenz models.", "codeRepository": "https://github.com/nikolaitM/DAPyr", "programmingLanguage": "Python", "author": {"@type": "Person", "name": "Maria Nikolaitchik"}}, {"@type": "SoftwareSourceCode", "name": "CADRE-JEDI-Edu", "description": "Tutorials introducing data assimilation methods in JEDI with a quasi-geostrophic model.", "codeRepository": "https://github.com/NicholasGasperoni/cadre-jedi-edu", "author": {"@type": "Organization", "name": "CADRE", "url": "https://ucadre.org/"}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Jonathan Poterjoy</span>
+        <span class="brand-sub">Data Assimilation · University of Maryland</span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="software.html" aria-current="page">Software</a>
+        <a href="talks.html">Talks</a>
+        <a href="group.html">Group</a>
+        <a href="teaching.html">Teaching</a>
+        <a class="nav-cv" href="cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Software</h1>
+      <p>Open-source data assimilation code and teaching material from our group.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <h2 class="vh">Packages and tutorials</h2>
+<div class="cards">
+  <div class="card" id="lpf">
+    <div class="label">Fortran · DART</div>
+    <h3>Local particle filter</h3>
+    <p>A localized particle filter for high-dimensional geophysical models, distributed with
+      the open-source NSF NCAR Data Assimilation Research Testbed (DART). The latest version,
+      with regularization and tempering, is on the LPF branch of our DART repository. Please
+      cite Poterjoy (<a href="https://doi.org/10.1175/MWR-D-15-0163.1">2016</a>, <a href="https://doi.org/10.1002/qj.4328">2022b</a>).</p>
+    <div class="links"><a href="https://github.com/jpoterjoy/DART/tree/LPF">LPF branch on GitHub</a><a href="https://dart.ucar.edu/">DART</a></div>
+  </div>
+  <div class="card" id="dapyr">
+    <div class="label">Python · Group software</div>
+    <h3>DAPyr</h3>
+    <p>A Python package for running data assimilation experiments with Lorenz models,
+      developed in our group by Ph.D. student Maria Nikolaitchik for teaching and methods
+      research.</p>
+    <div class="links"><a href="https://pypi.org/project/DAPyr/">PyPI</a><a href="https://dapyr.readthedocs.io/en/latest/">Documentation</a><a href="https://github.com/nikolaitM/DAPyr">GitHub</a></div>
+  </div>
+  <div class="card" id="jedi-edu">
+    <div class="label">JEDI · Tutorials</div>
+    <h3>CADRE-JEDI-Edu</h3>
+    <p>Hands-on tutorials that introduce data assimilation methods in the Joint Effort for
+      Data assimilation Integration (JEDI) using a two-layer quasi-geostrophic model.
+      Developed through CADRE; our group contributed the local particle filter tutorial.</p>
+    <div class="links"><a href="https://github.com/NicholasGasperoni/cadre-jedi-edu">GitHub</a><a href="https://github.com/NicholasGasperoni/cadre-jedi-edu/blob/main/notebooks/7.qg_LPF_tutorial.ipynb">LPF tutorial</a><a href="https://ucadre.org/">CADRE</a></div>
+  </div>
+</div>
+        <p class="note" style="margin-top:18px">More code from the group is on <a href="https://github.com/jpoterjoy">GitHub</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>Jonathan Poterjoy</h2>
+        Department of Atmospheric and Oceanic Science<br>
+        University of Maryland<br>
+        4254 Stadium Drive, 3431 Atlantic Building<br>
+        College Park, MD 20742
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:poterjoy@umd.edu">poterjoy@umd.edu</a><br>
+        <a href="cv.pdf">Curriculum vitae (PDF)</a>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <a href="https://scholar.google.com/citations?user=hd_ZciIAAAAJ">Google Scholar</a> · <a href="https://orcid.org/0000-0003-3927-4642">ORCID</a> · <a href="https://github.com/jpoterjoy">GitHub</a><br>
+        <a href="https://aosc.umd.edu/">UMD Atmospheric &amp; Oceanic Science</a><br>
+        <a href="https://ucadre.org/">CADRE data assimilation consortium</a><br>
+        <span class="small">Updated November 2026</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
